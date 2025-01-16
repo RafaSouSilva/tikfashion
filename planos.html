@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikFashion - Planos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="bg-gradient-custom">
+  <div class="d-flex flex-column min-vh-100 bg-gradient">
+    <!-- Header -->
+    <header class="sticky-top bg-white shadow-sm">
+      <div class="container d-flex align-items-center justify-content-between py-3">
+        <div class="d-flex align-items-center">
+          <i class="bi bi-camera-fill text-primary fs-4 me-2"></i>
+          <a href="index.html" class="fs-4 fw-bold">TikFashion</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow-1">
+      <section class="container py-5">
+        <h1 class="text-center mb-5">Preços</h1>
+        <p class="text-center mb-5">Preços especiais de lançamento da plataforma TikFashion. Pague somente após receber a sua foto!</p>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Plano Grátis -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h2 class="card-title text-center mb-0">Grátis</h2>
+              </div>
+              <div class="card-body">
+                <h3 class="text-center mb-4">
+                  <span class="display-4">$0</span>
+                  <span class="text-muted">/Foto</span>
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>A primeira foto será gratuita para você conhecer nossa plataforma.</li>
+              
+                </ul>
+                <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Grátis">Cadastre-se de graça</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Pro -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-primary">
+              <div class="card-header bg-primary text-white py-3">
+                <h2 class="card-title text-center mb-0">Pro</h2>
+              </div>
+              <div class="card-body">
+                <h3 class="text-center mb-4">
+                  <span class="display-4">$15</span>
+                  <span class="text-muted">/Foto/peça</span>
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Selecione o seu Avatar</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Uma foto do Avatar com a peça que você nos enviar</li>
+       
+                </ul>
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Pro">Conhecer</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Premium -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h2 class="card-title text-center mb-0">Premium</h2>
+              </div>
+              <div class="card-body">
+                <h3 class="text-center mb-4">
+                  <span class="display-4">$25</span>
+                  <span class="text-muted">/Foto + Vídeo </span>
+                </h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Selecione seu avatar.</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Uma foto do Avatar utilizando a peça que você nos enviar</li>
+                  <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Um vídeo do seu avatar com movimento</li>
+         
+                </ul>
+                <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#planoModal" data-plano="Premium">Contate-nos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-muted py-4">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2024 TikFashion. Todos os direitos reservados.</p>
+        <nav class="d-flex gap-3">
+          <a href="termos.html" class="text-muted text-decoration-none">Termos</a>
+          <a href="privacidade.html" class="text-muted text-decoration-none">Privacidade</a>
+          <a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Modal de Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contatoModalLabel">Entre em Contato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="mailto:rafaelsouzadasilva1982@gmail.com" method="POST" enctype="text/plain">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal do Formulário -->
+    <div class="modal fade" id="planoModal" tabindex="-1" aria-labelledby="planoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="planoModalLabel">Cadastro - Plano <span id="planoTipo"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="planoForm">
+              <input type="hidden" id="planoSelecionado" name="plano">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="loja" class="form-label">Nome da Loja</label>
+                <input type="text" class="form-control" id="loja" name="loja" required>
+              </div>
+              <div class="mb-3">
+                <label for="vendeOnline" class="form-label">Você vende online?</label>
+                <select class="form-select" id="vendeOnline" name="vendeOnline" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="descricaoModelo" class="form-label">Descrição do Modelo Desejado</label>
+                <textarea class="form-control" id="descricaoModelo" name="descricaoModelo" rows="3" 
+                  placeholder="Exemplo: Avatar feminino, 1.70m, cabelos longos castanhos, pele clara, estrutura física atlética..." required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="fotos" class="form-label">Upload de Fotos</label>
+                <input type="file" class="form-control" id="fotos" name="fotos" multiple accept="image/*" required>
+                <div class="form-text">
+                  Por favor, envie as fotos preferencialmente com fundo branco para melhor resultado, conforme nossa documentação técnica.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Sucesso -->
+    <div class="modal fade" id="sucessoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sucesso!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Seu formulário foi enviado com sucesso! Em breve entraremos em contato.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+    <script>
+      // Configuração do Firebase
+   
+      // Initialize Cloud Firestore and Storage
+      const db = firebase.firestore();
+      const storage = firebase.storage();
+
+      // Script do formulário
+      document.addEventListener('DOMContentLoaded', function() {
+        const planoModal = document.getElementById('planoModal');
+        const planoForm = document.getElementById('planoForm');
+        
+        planoModal.addEventListener('show.bs.modal', function(event) {
+          const button = event.relatedTarget;
+          const plano = button.getAttribute('data-plano');
+          document.getElementById('planoTipo').textContent = plano;
+          document.getElementById('planoSelecionado').value = plano;
+        });
+
+        planoForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          try {
+            // Capturar o botão de submit
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+
+            // Coletar dados do formulário
+            const formData = {
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+              plano: document.getElementById('planoSelecionado').value,
+              nome: document.getElementById('nome').value,
+              telefone: document.getElementById('telefone').value,
+              email: document.getElementById('email').value,
+              loja: document.getElementById('loja').value,
+              vendeOnline: document.getElementById('vendeOnline').value,
+              descricaoModelo: document.getElementById('descricaoModelo').value,
+              fotoUrls: []
+            };
+
+            // Upload das fotos
+            const fotos = document.getElementById('fotos').files;
+            const uploadPromises = [];
+
+            for (let i = 0; i < fotos.length; i++) {
+              const foto = fotos[i];
+              const fileName = `${Date.now()}_${foto.name}`;
+              const storageRef = storage.ref(`fotos/${formData.nome}/${fileName}`);
+              
+              const uploadTask = storageRef.put(foto).then(async (snapshot) => {
+                const url = await snapshot.ref.getDownloadURL();
+                return url;
+              });
+
+              uploadPromises.push(uploadTask);
+            }
+
+            // Esperar todos os uploads terminarem
+            formData.fotoUrls = await Promise.all(uploadPromises);
+
+            // Salvar no Firestore
+            await db.collection('submissoes').add(formData);
+
+            // Mostrar modal de sucesso
+            const sucessoModal = new bootstrap.Modal(document.getElementById('sucessoModal'));
+            const planoModalInstance = bootstrap.Modal.getInstance(planoModal);
+            planoModalInstance.hide();
+            sucessoModal.show();
+            planoForm.reset();
+
+          } catch (error) {
+            console.error('Erro ao enviar formulário:', error);
+            alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+          } finally {
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.innerHTML = 'Enviar';
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+</body>
+</html> 

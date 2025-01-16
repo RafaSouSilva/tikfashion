@@ -1,0 +1,151 @@
+/* Try-On Virtual Section Styles */
+.bg-dark {
+  background-color: #0a0a0a !important;
+}
+
+.model-grid {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.model-option {
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.model-option:hover {
+  transform: scale(1.05);
+}
+
+.model-option img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+
+.model-option.selected img {
+  border-color: #00ff9d;
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+.upload-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-box:hover {
+  border-color: #00ff9d !important;
+  background-color: rgba(0, 255, 157, 0.05);
+}
+
+.upload-box i {
+  color: #00ff9d;
+  margin-bottom: 1rem;
+}
+
+/* Sugestões de Peças */
+.suggestions-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #00ff9d #1a1a1a;
+}
+
+.suggestions-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.suggestions-scroll::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.suggestions-scroll::-webkit-scrollbar-thumb {
+  background-color: #00ff9d;
+  border-radius: 3px;
+}
+
+/* Range Slider Customization */
+.form-range::-webkit-slider-thumb {
+  background: #00ff9d;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-range::-moz-range-thumb {
+  background: #00ff9d;
+}
+
+.form-range::-moz-range-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #00ff9d;
+  border-color: #00ff9d;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #00cc7d;
+  border-color: #00cc7d;
+  color: #0a0a0a;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Estados de Drag and Drop */
+.upload-box.drag-over {
+  border-color: #00ff9d !important;
+  background-color: rgba(0, 255, 157, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .model-grid .row {
+    margin: -0.25rem;
+  }
+  
+  .model-option {
+    padding: 0.25rem;
+  }
+  
+  .upload-box {
+    min-height: 150px;
+  }
+}
+
+/* Animações */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 157, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 157, 0);
+  }
+}
+
+.generating {
+  animation: pulse 1.5s infinite;
+}
